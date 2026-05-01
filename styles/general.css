@@ -44,3 +44,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.gray {
+    background-color: var(--gray);
+}
+
+.white {
+    background-color: var(--white);
+}
