@@ -1,4 +1,118 @@
 header {
+    align-items:  center;
+    background-color: var(--green);
     display: flex;
     flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+}
+
+header .social {
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+    padding-left: 10%;
+}
+
+header .social a {
+    border-radius: 100%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    height: 20px;
+    opacity: 0.55;
+    transition: all 0.1s ease-in-out;
+    width: 20px;
+}
+
+header .social a:hover {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    opacity: 1;
+}
+
+header nav {
+    color: white;
+    display: flex;
+    font-weight: 400;
+    gap: 20px;
+    padding-right: 5%;
+}
+
+header nav a {
+    font-size: 14px;
+    opacity: 0.75;
+    position: relative;
+    transition: all 0.1s ease-in-out;
+}
+
+header nav a:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+header nav a::after {
+    background-color: white;
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    transform: translateY(25px);
+    transition: all 0.3s ease-in-out;
+    width: 0px;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+
+.main_header {
+    align-items: center;
+    border-bottom: solid 1px #ccc;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.main_header .logo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: center;
+    padding-left:  15%;
+    width: 50px;
+}
+
+.main_header .logo img {
+    height: 500%;
+}
+
+
+.main_header .header_buttons {
+    display: flex;
+    gap: 20px;
+    padding-right: 5%;
+    width: fit-content;
+}
+
+.main_header .header_buttons a {
+    border: solid 1px var(--green);
+    border-radius: 7px;
+    background-color: var(--white);
+    column-span: var(--green);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 0.15s ease-in-out;
+}
+
+.main_header .header_buttons a:hover {
+    color: var(--white);
+    background-color: var(--green);
+    column-span: var(--white);
 }
