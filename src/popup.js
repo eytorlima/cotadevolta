@@ -20,7 +20,7 @@ const createPopup = () => {
                 minlength="3"
                 placeholder="Digite apenas letras"
                 required
-                pattern="[A-Za-zÀ-ÿ\s]+"
+                pattern="[A-Za-zÀ-ÿ ]+"
                 title="Digite apenas letras"
             />
         </label>
@@ -92,7 +92,32 @@ buttons.forEach((btn) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("close") || e.target.id === "popup") {
-    popup.classList.remove("active");
-  }
+    if (e.target.classList.contains("close") || e.target.id === "popup") {
+        popup.classList.remove("active");
+    }
 });
+
+const checkSuccess = () => {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("sucesso") === "true") {
+        showSuccessPopup();
+
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+};
+
+const showSuccessPopup = () => {
+    const title = document.getElementById("popupTitle");
+    const form = popup.querySelector("form");
+    const description = popup.querySelector("p");
+
+    title.textContent = "Mensagem enviada com sucesso!";
+    description.innerHTML = `<p><br>Recebemos seus dados. <br> Em breve entraremos em contato.</p>`;
+
+    form.innerHTML = `<button class="close"></button>`;
+
+    popup.classList.add("active");
+};
+
+checkSuccess();
