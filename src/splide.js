@@ -6,9 +6,9 @@ const splide = new Splide('.splide', {
   pauseOnHover: false,
   pagination: false,
   focus: 'center',
-  perPage: 4,
+  perPage: 3,
   autoScroll: {
-    speed: 1,
+    speed: 0.35,
   },
 });
 
