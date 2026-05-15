@@ -67,6 +67,27 @@
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+    .contact {
+        padding: 150px 10%;
+    }
+
+    .contact h2 {
+        font-size: 40px;
+    }
+
+    .contact p {
+        font-size: 18px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .contact .buttons {
+        flex-direction: column;
+        gap: 20px;
+   }
+    
+}
 
 @media (max-width: 768px) {
      .contact h2 {
