@@ -1,15 +1,14 @@
 main {
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 150px;
-    padding-bottom: 100px;
+    justify-content: space-between;
+    padding: 150px 15% 100px;
 }
 
 main .text_area {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    width: 40%;
+    width: 60%;
 }
 
 main #safe {
@@ -30,10 +29,14 @@ main #safe img {
     width: 12px;
 }
 
-.text_area h1 {
+.text_area h1#pc, .text_area h1#mobile {
     font-size: 60px;
     font-weight: 600;
     line-height: 1.1;
+}
+
+.text_area h1#mobile {
+    display: none;
 }
 
 .text_area h1 span {
@@ -98,15 +101,15 @@ main .animation_area {
     align-self: center;
     align-items: center;
     display: flex;
-    height: 384px;
+    height: fit-content;
     justify-content: center;
-    width: 384px;
+    width: 30%;
 }
 
 main .animation_area .text {
     align-self: center;
     color: var(--white);
-    font-size: 64px;
+    font-size: 54px;
     font-weight: 700;
     position: absolute;
     text-shadow: 0px 1px 3px black;
@@ -117,17 +120,17 @@ main .animation_area .bg {
     border-radius: 100%;
     background-size: cover;
     background-position: center;
-    height: 100%;
-    width: 100%;
+    height: 300px;
+    width: 300px;
 }
 
 main .animation_area .border {
     border: solid 5px var(--white);
     border-style: dashed;
-    border-radius: 50%;
-    height: 374px;
+    border-radius: 100%;
+    height: 290px;
     position: absolute;
-    width: 374px;
+    width: 290px;
     animation: spin 30s linear infinite;
 }
 
@@ -140,4 +143,123 @@ main .animation_area .border {
     transform: rotate(360deg);
     transform-origin: center;
   }
+}
+
+
+@media (max-width: 1400px) {
+    main {
+        padding: 150px 10% 100px;
+    }
+
+    main .text_area {
+        width: 55%;
+    }
+
+    .text_area h1 {
+        font-size: 50px;
+    }
+
+    main .animation_area {
+        width: 40%;
+    }
+
+    .text_area .buttons {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .text_area .buttons a {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        padding: 100px 10%;
+    }
+
+    .text_area #pc {
+        display: none;
+    }
+
+    .text_area h1#mobile {
+        display: block;
+        font-size: 42px;
+    }
+
+    main .text_area {
+        width: 100%;
+    }
+
+    .text_area p {
+        font-weight: 500;
+    }
+
+    .text_area .buttons {
+        flex-direction: row;
+    }
+
+    .text_area .buttons a {
+        width: fit-content;
+    }
+
+    main .animation_area {
+       display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .text_area h1#mobile {
+        display: block;
+        font-size: 36px;
+    }
+
+    .text_area p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .text_area .buttons {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .text_area .buttons a {
+        width: 300px;
+    }
+
+    .text_area .infos {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .text_area h1#mobile {
+        display: block;
+        font-size: 32px;
+    }
+
+    .text_area p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .text_area .buttons {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .text_area .buttons a {
+        width: 300px;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    .text_area h1#mobile {
+        display: block;
+        font-size: 28px;
+    }
 }
