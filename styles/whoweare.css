@@ -71,3 +71,100 @@
     font-size: 13px;
     font-weight: 500;
 }
+
+
+@media (max-width: 1400px) {
+    .whoweare {
+        padding: 100px 10%;
+    }
+
+    .whoweare .card {
+        height: 300px;
+    }
+
+    .whoweare .card p {
+        text-align: justify;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .whoweare {
+        align-items: center;
+    }
+
+    .whoweare p {
+        text-align: justify;
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .whoweare h2 {
+        font-size: 32px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .whoweare .cards {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .whoweare .card {
+        height: 260px;
+        padding: 20px;
+        width: 600px;
+    }
+
+    .whoweare .card h2 {
+        font-size: 20px;
+        align-self: start;
+    }
+
+    .whoweare .card p {
+        text-align: justify;
+        font-size: 16px;
+        align-self: start;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .whoweare h2 {
+        font-size: 28px;
+    }
+
+    .whoweare p {
+        font-size: 16px;
+        width: 95%;
+    }
+
+    .whoweare .card {
+        width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .whoweare h2 {
+        font-size: 24px;
+    }
+
+    .whoweare p {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .whoweare .card {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whoweare h2 {
+        font-size: 20px;
+    }
+
+    .whoweare .card {
+        width: 360px;
+    }
+}
