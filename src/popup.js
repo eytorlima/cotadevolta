@@ -10,7 +10,7 @@ const createPopup = () => {
       <h3 id="popupTitle">Entraremos em contato</h3>
       <p>Deixe seu contato — nossa equipe retorna em breve.</p>
 
-      <form action="https://formsubmit.co/cotadevolta@gmail.com" method="POST">
+      <form id="contactForm">
         <label>
           Nome
            <input
@@ -56,10 +56,7 @@ const createPopup = () => {
             </label>
         </div>
 
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html?sucesso=true">
-        <input type="hidden" name="_subject" value="Novo contato do site">
+        <div class="h-captcha" data-captcha="true"></div>
 
         <button type="submit">Enviar</button>
       </form>
@@ -67,6 +64,41 @@ const createPopup = () => {
   `;
 
   document.body.appendChild(popup);
+
+  const form = document.getElementById("contactForm");
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    formData.append("access_key", "965e3b80-5f04-42d5-80a4-6316a4ac73bf");
+
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Enviando...";
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (response.ok) {
+        showSuccessPopup();
+        form.reset();
+      } else {
+        alert("Erro: " + data.message);
+      }
+    } catch (error) {
+      alert("Algo deu errado. Tente novamente.");
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+
 };
 
 createPopup();
@@ -74,7 +106,6 @@ createPopup();
 
 const popup = document.getElementById("popup");
 const buttons = document.querySelectorAll(".openPopup");
-
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -92,32 +123,31 @@ buttons.forEach((btn) => {
 });
 
 document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("close") || e.target.id === "popup") {
-        popup.classList.remove("active");
-    }
+  if (e.target.classList.contains("close") || e.target.id === "popup") {
+    popup.classList.remove("active");
+  }
 });
 
 const checkSuccess = () => {
-    const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.location.search);
 
-    if (params.get("sucesso") === "true") {
-        showSuccessPopup();
-
-        window.history.replaceState({}, document.title, window.location.pathname);
-    }
+  if (params.get("sucesso") === "true") {
+    showSuccessPopup();
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
 };
 
 const showSuccessPopup = () => {
-    const title = document.getElementById("popupTitle");
-    const form = popup.querySelector("form");
-    const description = popup.querySelector("p");
+  const title = document.getElementById("popupTitle");
+  const form = popup.querySelector("form");
+  const description = popup.querySelector("p");
 
-    title.textContent = "Mensagem enviada com sucesso!";
-    description.innerHTML = `<p><br>Recebemos seus dados. <br> Em breve entraremos em contato.</p>`;
+  title.textContent = "Mensagem enviada com sucesso!";
+  description.innerHTML = `<p><br>Recebemos seus dados. <br> Em breve entraremos em contato.</p>`;
 
-    form.innerHTML = `<button class="close"></button>`;
+  form.innerHTML = `<button class="close"></button>`;
 
-    popup.classList.add("active");
+  popup.classList.add("active");
 };
 
 checkSuccess();

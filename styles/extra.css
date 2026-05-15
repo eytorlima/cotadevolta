@@ -26,24 +26,24 @@
 }
 
 .chat {
-align-items: center;
-background-color: var(--lgreen);
-border: none;
-border-radius: 150px;
-bottom: 30px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-color: var(--white);
-display: flex;
-font-size: 14px;
-font-weight: 500;
-height: 40px;
-justify-content: center;
-outline: none;
-position: fixed;
-right: 100px;
-transition: all 0.1s ease-in-out;
-width: 160px;
-z-index: 1000;
+  align-items: center;
+  background-color: var(--lgreen);
+  border: none;
+  border-radius: 150px;
+  bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  color: var(--white);
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  justify-content: center;
+  outline: none;
+  position: fixed;
+  right: 100px;
+  transition: all 0.1s ease-in-out;
+  width: 160px;
+  z-index: 1000;
 }
 
 .chat img {
@@ -58,16 +58,16 @@ z-index: 1000;
 }
 
 .splide__slide {
-    align-self: center;
-    display: flex;
-    justify-content: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
 }
 
 .splide__slide img {
-    align-items: center;
-    height: auto;
-    justify-content: center;
-    width: 160px;
+  align-items: center;
+  height: auto;
+  justify-content: center;
+  width: 160px;
 }
 
 @media (max-width: 600px) { 

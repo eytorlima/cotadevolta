@@ -74,32 +74,36 @@
 }
 
 .popup-content .radio-group {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .popup-content .radio {
-    align-self: center;
-    gap: 20px;
+  align-self: center;
+  gap: 20px;
 }
 
 .popup-content button[type="submit"] {
-    background-color: var(--gray);
-    border-radius: 5px;
-    border: none;
-    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.2);
-    color: var(--green);
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    margin-top: 10px;
-    padding: 10px;
-    transition: all 0.2s ease-in-out;
+  background-color: var(--gray);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.2);
+  color: var(--green);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
 }
 
 .popup-content button[type="submit"]:hover {
-    background: #184d3a;
-    color: var(--white);
+  background: #184d3a;
+  color: var(--white);
+}
+
+.popup-content .h-captcha {
+  align-self: center;
 }
 
 @media (max-width: 600px) { 
