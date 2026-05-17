@@ -35,7 +35,7 @@ O projeto está em produção e acessível publicamente via **Netlify**.
 | Ambiente | URL |
 |---|---|
 | Produção | [cotadevolta.netlify.app](https://cotadevolta.netlify.app) |
-| Repositório | [github.com/eytorsousa/cotadevolta](https://github.com/eytorsousa/cotadevolta) |
+| Repositório | [github.com/eytorlima/cotadevolta](https://github.com/eytorlima/cotadevolta) |
 
 ---
 
@@ -103,7 +103,7 @@ cotadevolta/
 Quer sua marca exibida em uma landing page como essa ou em um site mais complexo? Entre em contato.
 
 
-Desenvolvido por **[Eytor Lima](https://github.com/eytorsousa)**.
+Desenvolvido por **[Eytor Lima](https://github.com/eytorlima)**.
 
 ---
 
