@@ -8,3 +8,7 @@ window.addEventListener("scroll", () => {
     main_header.classList.toggle("visible", scrolled > 250);
     main_header.classList.toggle("invisible", scrolled <= 250);
 });
+
+document.querySelectorAll(".price").forEach(el => {
+    el.textContent = CONFIG.price;
+});
