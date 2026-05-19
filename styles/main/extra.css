@@ -16,8 +16,8 @@
 }
 
 .wpp_btn img {
-  width: 30px;
   height: 30px;
+  width: 30px;
 }
 
 .wpp_btn:hover {
@@ -47,9 +47,9 @@
 }
 
 .chat img {
-  width: 20px;
   height: 20px;
   margin-right: 8px;
+  width: 20px;
 }
 
 .chat:hover {
