@@ -1,9 +1,9 @@
 .whoweare {
     display: flex;
     flex-direction: column;
+    gap: 12px;
     justify-content: space-evenly;
     padding: 100px 15%;
-    gap: 12px;
 }
 
 .whoweare h6 {
@@ -93,8 +93,8 @@
     }
 
     .whoweare p {
-        text-align: justify;
         font-size: 18px;
+        text-align: justify;
         width: 90%;
     }
 
@@ -116,14 +116,14 @@
     }
 
     .whoweare .card h2 {
-        font-size: 20px;
         align-self: start;
+        font-size: 20px;
     }
 
     .whoweare .card p {
-        text-align: justify;
-        font-size: 16px;
         align-self: start;
+        font-size: 16px;
+        text-align: justify;
         width: 90%;
     }
 }
@@ -139,8 +139,8 @@
     }
     
     .whoweare .card {
-        width: 500px;
         padding: 15px;
+        width: 500px;
     }
     
     .whoweare .card h2 {
