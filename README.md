@@ -1,110 +1,113 @@
+# Cota de Volta
 
-# 🌿 Cota de Volta
+[![Deploy](https://img.shields.io/badge/deploy-netlify-00C7B7?style=flat-square&logo=netlify)](https://cotadevolta.netlify.app)
+[![Status](https://img.shields.io/badge/status-production-brightgreen?style=flat-square)]()
+[![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red?style=flat-square)]()
 
-> Plataforma comercial de análise de extratos de consórcio e recuperação de valores.
-
----
-
-## 📌 Sobre o Projeto
-
-A **Cota de Volta** é uma empresa especializada em **análise técnica de extratos de consórcio**, atuando em todo o Brasil. O site tem finalidade comercial e funciona como principal canal de captação de clientes, apresentando os serviços, gerando contatos qualificados via formulário e WhatsApp, e transmitindo credibilidade e profissionalismo à marca.
-
-### O que a empresa faz?
-
-- Analisa extratos de consórcios ativos ou cancelados
-- Identifica cobranças indevidas, descontos abusivos e valores a recuperar
-- Orienta clientes sobre medidas administrativas ou judiciais
-- Indica advogados especializados quando necessário
+> Commercial platform for consortium statement analysis and value recovery for clients across Brazil.
 
 ---
 
-## 📬 Contato - COTA DE VOLTA
+## 📌 About the Project
 
-| Canal | Link |
-|---|---|
-| WhatsApp | [wa.me/5511991614791](https://wa.me/5511991614791) |
-| Instagram | [@cotadevolta](https://www.instagram.com/cotadevolta/) |
-| Facebook | [Cota de Volta](https://www.facebook.com/profile.php?id=61588958471957) |
+**Cota de Volta** specializes in **technical analysis of consortium statements**. The website is the main client acquisition channel — it presents the services, generates qualified leads via form and WhatsApp, and conveys credibility to the brand.
 
----
+### What the company does
 
-## 🌐 Deploy
-
-O projeto está em produção e acessível publicamente via **Netlify**.
-
-| Ambiente | URL |
-|---|---|
-| Produção | [cotadevolta.netlify.app](https://cotadevolta.netlify.app) |
-| Repositório | [github.com/eytorlima/cotadevolta](https://github.com/eytorlima/cotadevolta) |
+- Analyzes active or cancelled consortium statements
+- Identifies improper charges, abusive discounts, and recoverable amounts
+- Guides clients on administrative or legal measures
+- Refers clients to specialized lawyers when needed
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ✨ Features
+
+### Interface & Experience
+- Scroll-triggered entrance animations (AOS)
+- Automatic and continuous partner companies carousel (Splide.js)
+- Fixed header with dynamic scroll behavior
+- Animated accordion in the FAQ section
+- Progress bar animation via IntersectionObserver
+- Always-visible floating WhatsApp button
+- Fully responsive design for all devices
+
+### Contact Form
+- Contact popup with field validation
+- Submission via REST API (Web3Forms)
+- Anti-spam protection with hCaptcha
+- WhatsApp integration for direct support
+
+---
+
+## 🛠️ Tech Stack
 
 ### Core
-| Tecnologia | Uso |
-|---|---|
-| **HTML5** | Estrutura semântica das páginas |
-| **CSS3** | Estilização modular por seção, responsividade com media queries |
-| **JavaScript (ES6+)** | Interatividade, animações, envio de formulário via fetch API |
 
-### Bibliotecas Externas
-| Biblioteca | Versão | Uso |
+| Technology | Usage |
+|---|---|
+| **HTML5** | Semantic page structure |
+| **CSS3** | Modular styling, global variables and responsiveness with media queries |
+| **JavaScript (ES6+)** | Interactivity, animations and form submission via Fetch API |
+
+### Libraries
+
+| Library | Version | Usage |
 |---|---|---|
-| [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/) | 2.3.4 | Animações de entrada dos elementos ao rolar a página |
-| [Splide.js](https://splidejs.com/) | Latest | Carrossel automático das empresas parceiras |
-| [Splide Auto Scroll Extension](https://splidejs.com/extensions/auto-scroll/) | Latest | Extensão de scroll automático e contínuo do carrossel |
+| [AOS](https://michalsnik.github.io/aos/) | 2.3.4 | Scroll-triggered entrance animations |
+| [Splide.js](https://splidejs.com/) | Latest | Partner companies carousel |
+| [Splide Auto Scroll](https://splidejs.com/extensions/auto-scroll/) | Latest | Continuous auto-scroll extension |
 
-### Serviços de Terceiros
-| Serviço | Uso |
+### Services
+
+| Service | Usage |
 |---|---|
-| [Web3Forms](https://web3forms.com/) | Envio do formulário de contato via API REST |
-| [hCaptcha (via Web3Forms)](https://www.hcaptcha.com/) | Proteção anti-spam no formulário de contato |
-| [Google Fonts](https://fonts.google.com/) | Fonte **Poppins** utilizada em todo o projeto |
-| [WhatsApp API](https://wa.me/) | Link direto para atendimento via WhatsApp |
-| [Netlifyl](https://netlify.com/) | Hospedagem e deploy contínuo via GitHub |
+| [Web3Forms](https://web3forms.com/) | Contact form submission via REST API |
+| [hCaptcha](https://www.hcaptcha.com/) | Anti-spam protection on the form |
+| [Google Fonts](https://fonts.google.com/) | **Poppins** font used throughout the project |
+| [WhatsApp API](https://wa.me/) | Direct link for customer support |
+| [Netlify](https://netlify.com/) | Hosting and continuous deployment via GitHub |
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 cotadevolta/
 ├── assets/
-│   ├── icons/          # Ícones utilizados no site (SVG/PNG)
-│   └── images/         # Imagens, logo e logos de empresas parceiras
+│   ├── icons/          # Icons (SVG/PNG)
+│   └── images/         # Images, logo and partner logos
 ├── src/
-│   ├── index.js        # Scroll do header fixo e main_header dinâmico
-│   ├── popup.js        # Criação, controle e envio do formulário popup
-│   ├── progressbar.js  # Animação da barra de progresso via IntersectionObserver
-│   ├── splide.js       # Inicialização e configuração do carrossel
-│   ├── summary.js      # Accordion do FAQ (fecha outros ao abrir um)
-│   └── aos.js          # Inicialização do AOS com configurações globais
+│   ├── index.js        # Fixed header scroll and dynamic main_header
+│   ├── popup.js        # Contact popup creation, control and submission
+│   ├── progressbar.js  # Progress bar animation (IntersectionObserver)
+│   ├── splide.js       # Carousel initialization and configuration
+│   ├── summary.js      # FAQ accordion
+│   └── aos.js          # AOS initialization with global settings
 ├── styles/
-│   ├── general.css         # Reset, variáveis CSS globais e estilos base
-│   ├── extra.css           # Botão flutuante de WhatsApp e botão "Fale conosco"
-│   ├── header.css          # Header fixo superior e main_header dinâmico
-│   ├── main.css            # Seção hero principal
-│   ├── whoweare.css        # Seção "Quem Somos"
-│   ├── howitworks.css      # Seção "Como Funciona" com progressbar
-│   ├── faq.css             # Seção FAQ com accordion animado
-│   ├── enterprises.css     # Seção de empresas com carrossel Splide
-│   ├── feedbacks.css       # Seção de depoimentos
-│   ├── contact.css         # Seção de contato
-│   ├── footer.css          # Rodapé
-│   └── talkwithus_popup.css # Popup de formulário de contato
-└── index.html              # Página principal
+│   ├── general.css             # Reset, global variables and base styles
+│   ├── extra.css               # Floating WhatsApp button and "Talk to us"
+│   ├── header.css              # Fixed header and dynamic main_header
+│   ├── main.css                # Hero section
+│   ├── whoweare.css            # "Who We Are" section
+│   ├── howitworks.css          # "How It Works" section with progress bar
+│   ├── faq.css                 # FAQ section with animated accordion
+│   ├── enterprises.css         # Partners section with carousel
+│   ├── feedbacks.css           # Testimonials section
+│   ├── contact.css             # Contact section
+│   ├── footer.css              # Footer
+│   └── talkwithus_popup.css    # Contact form popup
+└── index.html                  # Main page
 ```
 
 ---
 
-## 👨‍💻 Desenvolvimento
+## 📄 License
 
-Quer sua marca exibida em uma landing page como essa ou em um site mais complexo? Entre em contato.
+© 2026 Cota de Volta. All rights reserved.
 
-
-Desenvolvido por **[Eytor Lima](https://github.com/eytorlima)**.
+This repository is public for portfolio and transparency purposes only. No part of this code, design, or content may be copied, modified, distributed, or used in any form without explicit written permission from the author.
 
 ---
 
-*© 2026 Cota de Volta. Todos os direitos reservados.*
+
