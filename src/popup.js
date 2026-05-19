@@ -5,7 +5,7 @@ const createPopup = () => {
 
     popup.innerHTML = `
     <div class="popup-content">
-      <button class="close">&times;</button>
+      <button class="close" aria-label="Fechar formulário">&times;</button>
 
       <h3 id="popupTitle">Entraremos em contato</h3>
       <p>Deixe seu contato — nossa equipe retorna em breve.</p>
