@@ -75,29 +75,36 @@
 ```
 cotadevolta/
 ├── assets/
-│   ├── icons/          # Icons (SVG/PNG)
-│   └── images/         # Images, logo and partner logos
+│   ├── icons/              # Icons (SVG/PNG)
+│   └── images/             # Images, logo and partner logos
 ├── src/
-│   ├── index.js        # Fixed header scroll and dynamic main_header
-│   ├── popup.js        # Contact popup creation, control and submission
-│   ├── progressbar.js  # Progress bar animation (IntersectionObserver)
-│   ├── splide.js       # Carousel initialization and configuration
-│   ├── summary.js      # FAQ accordion
-│   └── aos.js          # AOS initialization with global settings
+│   ├── aos.js              # AOS initialization with global settings
+│   ├── config.js           # Global config (price, policy date)
+│   ├── index.js            # Fixed header scroll and dynamic main_header
+│   ├── popup.js            # Contact popup creation, control and submission
+│   ├── privacidade.js      # Privacy policy page dynamic content
+│   ├── progressbar.js      # Progress bar animation (IntersectionObserver)
+│   ├── schema.js           # Structured data (JSON-LD schema)
+│   ├── splide.js           # Carousel initialization and configuration
+│   └── summary.js          # FAQ accordion
 ├── styles/
-│   ├── general.css             # Reset, global variables and base styles
-│   ├── extra.css               # Floating WhatsApp button and "Talk to us"
-│   ├── header.css              # Fixed header and dynamic main_header
-│   ├── main.css                # Hero section
-│   ├── whoweare.css            # "Who We Are" section
-│   ├── howitworks.css          # "How It Works" section with progress bar
-│   ├── faq.css                 # FAQ section with animated accordion
-│   ├── enterprises.css         # Partners section with carousel
-│   ├── feedbacks.css           # Testimonials section
-│   ├── contact.css             # Contact section
-│   ├── footer.css              # Footer
-│   └── talkwithus_popup.css    # Contact form popup
-└── index.html                  # Main page
+│   ├── main/
+│   │   ├── contact.css             # Contact section
+│   │   ├── enterprises.css         # Partners section with carousel
+│   │   ├── extra.css               # Floating WhatsApp button and "Talk to us"
+│   │   ├── faq.css                 # FAQ section with animated accordion
+│   │   ├── feedbacks.css           # Testimonials section
+│   │   ├── footer.css              # Footer
+│   │   ├── general.css             # Reset, global CSS variables and base styles
+│   │   ├── header.css              # Fixed header and dynamic main_header
+│   │   ├── howitworks.css          # "How It Works" section with progress bar
+│   │   ├── main.css                # Hero section
+│   │   ├── talkwithus_popup.css    # Contact form popup
+│   │   └── whoweare.css            # "Who We Are" section
+│   └── policy/
+│       └── privacy_policy.css      # Privacy policy page styles
+├── index.html              # Main page
+└── privacidade.html        # Privacy policy page
 ```
 
 ---
@@ -107,7 +114,3 @@ cotadevolta/
 © 2026 Cota de Volta. All rights reserved.
 
 This repository is public for portfolio and transparency purposes only. No part of this code, design, or content may be copied, modified, distributed, or used in any form without explicit written permission from the author.
-
----
-
-
