@@ -59,6 +59,10 @@ const createPopup = () => {
         <div class="h-captcha" data-captcha="true"></div>
 
         <button type="submit">Enviar</button>
+         <p class="privacy-notice">
+            Ao enviar, você concorda com nossa 
+            <a href="/privacidade.html" target="_blank">Política de Privacidade</a>.
+        </p>
       </form>
     </div>
   `;
