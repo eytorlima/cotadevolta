@@ -1,8 +1,8 @@
 .faq {
   display: flex;
+  gap: 50px;
   justify-content: center;
   padding: 100px 15%;
-  gap: 50px;
 }
 
 .faq .text {
@@ -20,9 +20,9 @@
 }
 
 .faq h2 {
-  line-height: 1.05;
   font-size: 36px;
   font-weight: 600;
+  line-height: 1.05;
 }
 
 .questions details {
@@ -32,13 +32,13 @@
 }
 
 .questions summary {
-  list-style: none;
+  align-items: center;
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  list-style: none;
 }
 
 .questions summary::-webkit-details-marker {
@@ -47,8 +47,8 @@
 
 .questions summary::after {
   content: ">";
-  transform: rotate(90deg);
   font-size: 18px;
+  transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
 
@@ -59,11 +59,11 @@
 .questions details {
   &::details-content {
     transition: height 1s; 
+    height: 0;
+    overflow: hidden;
     transition:
       height 0.3s,
       content-visibility 0.3s allow-discrete;
-    overflow: hidden;
-    height: 0;
   }
   
   &[open]::details-content {
@@ -74,10 +74,10 @@
 }
 
 .questions details p {
-  margin-top: 20px;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 500;
   font-size: 14px;
+  margin-top: 20px;
 }
 
 .questions details[closed] p {
@@ -110,13 +110,13 @@
   }
 
   .questions details p {
-    width: 90%;
     font-size: 16px;
+    width: 90%;
   }
 }
 
 @media (max-width: 1024px) {
-   .questions details {
+  .questions details {
     width: 100%;
   }
 }
@@ -138,14 +138,14 @@
   }
 
   .questions details p {
-    width: 95%;
     font-size: 14px;
     text-align: justify;
+    width: 95%;
   }
 }
 
 @media (max-width: 600px) {
-   .faq h2 {
+  .faq h2 {
     font-size: 24px;
   }
   
@@ -154,14 +154,14 @@
   }
 
   .questions details p {
-    width: 95%;
     font-size: 13px;
     text-align: justify;
+    width: 95%;
   }
 }
 
 @media (max-width: 480px) {
-   .faq h2 {
+  .faq h2 {
     font-size: 20px;
   }
 }
