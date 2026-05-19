@@ -17,8 +17,8 @@ footer .content {
 .footerlogo {
     align-items: center;
     display: flex;
-    justify-content: center;
     height: 100px;
+    justify-content: center;
     overflow: hidden;
     width: 260px;
 }
@@ -51,8 +51,8 @@ footer .by a {
     }
 
     footer .content p {
-        text-align: center;
         font-size: 14px;
+        text-align: center;
     }
 }
 
