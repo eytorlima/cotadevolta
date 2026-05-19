@@ -4,17 +4,17 @@ header {
   display: flex;
   justify-content: space-between;
   height: 50px;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   width: 100%;
   z-index: 1000;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 header.hidden {
-    transform: translateY(-100%);
     opacity: 0;
+    transform: translateY(-100%);
 }
 
 header .social {
@@ -64,9 +64,9 @@ header nav a:hover {
 header nav a::after {
     background-color: white;
     content: '';
-    position: absolute;
     height: 2px;
     left: 0;
+    position: absolute;
     transform: translateY(25px);
     transition: all 0.3s ease-in-out;
     width: 0px;
@@ -82,26 +82,26 @@ header nav a:hover::after {
     border-bottom: solid 1px #ccc;
     background-color: var(--white);
     display: flex;
+    left: 0;
     justify-content: space-between;
+    opacity: 0;
     padding: 10px 0;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
     transform: translateY(-100%);
-    opacity: 0;
     transition: all 0.3s ease-in-out;
+    width: 100%;
     z-index: 999;
 }
 
 .main_header.visible {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
 }
 
 .main_header.invisible {
-    transform: translateY(-100%);
     opacity: 0;
+    transform: translateY(-100%);
 }
 
 .main_header .logo {
@@ -147,8 +147,8 @@ header nav a:hover::after {
 }
 
 .main_header .header_buttons a:hover {
-    color: var(--white);
     background-color: var(--green);
+    color: var(--white);
     column-span: var(--white);
 }
 
@@ -200,20 +200,20 @@ header nav a:hover::after {
     }
 
     .main_header .header_buttons {
-        padding: 0;
-        gap: 0;
         align-items: center;
-        justify-content: space-evenly;
         display: flex;
+        gap: 0;
+        justify-content: space-evenly;
+        padding: 0;
         width: 100%;
     }
 
     .main_header .header_buttons a {
-        display: flex;
         align-items: center;
-        justify-content: center;
+        display: flex;
         font-size: 10px;
         height: fit-content;
+        justify-content: center;
         width: 40%;
     }
 }
