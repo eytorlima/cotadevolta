@@ -1,9 +1,9 @@
 const createPopup = () => {
-  const popup = document.createElement("div");
-  popup.id = "popup";
-  popup.className = "popup";
+    const popup = document.createElement("div");
+    popup.id = "popup";
+    popup.className = "popup";
 
-  popup.innerHTML = `
+    popup.innerHTML = `
     <div class="popup-content">
       <button class="close">&times;</button>
 
@@ -83,23 +83,29 @@ const createPopup = () => {
     submitBtn.disabled = true;
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-      const data = await response.json();
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+        });
+        const data = await response.json();
 
-      if (response.ok) {
-        showSuccessPopup();
-        form.reset();
-      } else {
-        alert("Erro: " + data.message);
-      }
+        if (response.ok) {
+            showSuccessPopup();
+            form.reset();
+        } else {
+            const isCaptchaError = data.message?.toLowerCase().includes("captcha") || 
+                                data.message?.toLowerCase().includes("token");
+
+            alert(isCaptchaError 
+                ? "Por favor, complete o Captcha antes de enviar." 
+                : "Erro: " + data.message
+            );
+        }
     } catch (error) {
-      alert("Algo deu errado. Tente novamente.");
+        alert("Algo deu errado. Tente novamente.");
     } finally {
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
     }
   });
 
@@ -112,46 +118,45 @@ const popup = document.getElementById("popup");
 const buttons = document.querySelectorAll(".openPopup");
 
 buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const type = btn.dataset.type;
-    const title = document.getElementById("popupTitle");
+    btn.addEventListener("click", () => {
+        const type = btn.dataset.type;
+        const title = document.getElementById("popupTitle");
 
-    if (type === "extrato") {
-      title.textContent = "Analisar extrato";
-    } else {
-      title.textContent = "Recuperar valores";
-    }
+        title.textContent = "Analisar extrato";
+        popup.classList.add("active");
 
-    popup.classList.add("active");
-  });
+        if (window.hcaptcha) {
+            setTimeout(() => hcaptcha.reset(), 100);
+        }
+    });
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("close") || e.target.id === "popup") {
-    popup.classList.remove("active");
-  }
+    if (e.target.classList.contains("close") || e.target.id === "popup") {
+        popup.classList.remove("active");
+    }
 });
 
 const checkSuccess = () => {
-  const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
 
-  if (params.get("sucesso") === "true") {
-    showSuccessPopup();
-    window.history.replaceState({}, document.title, window.location.pathname);
-  }
+    if (params.get("sucesso") === "true") {
+        showSuccessPopup();
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
 };
 
 const showSuccessPopup = () => {
-  const title = document.getElementById("popupTitle");
-  const form = popup.querySelector("form");
-  const description = popup.querySelector("p");
+    const title = document.getElementById("popupTitle");
+    const form = popup.querySelector("form");
+    const description = popup.querySelector("p");
 
-  title.textContent = "Mensagem enviada com sucesso!";
-  description.innerHTML = `<p><br>Recebemos seus dados. <br> Em breve entraremos em contato.</p>`;
+    title.textContent = "Mensagem enviada com sucesso!";
+    description.innerHTML = `<p><br>Recebemos seus dados. <br> Em breve entraremos em contato.</p>`;
 
-  form.innerHTML = `<button class="close"></button>`;
+    form.innerHTML = `<button class="close"></button>`;
 
-  popup.classList.add("active");
+    popup.classList.add("active");
 };
 
 checkSuccess();
