@@ -1,11 +1,10 @@
-
 .contact {
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap: 12px;
     justify-content: space-evenly;
     padding: 150px 16%;
-    gap: 12px;
 }
 
 .contact h6 {
@@ -38,11 +37,11 @@
 
 .contact .buttons a, .contact .buttons button {
     align-items: center;
-    display: flex;
     background-color: var(--green);
     border: solid 1px var(--white);
     border-radius: 6px;
     color: var(--white);
+    display: flex;
     font-size: 20px;
     font-weight: 600;
     gap: 12px;
