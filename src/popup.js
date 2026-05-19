@@ -97,7 +97,7 @@ const createPopup = () => {
                                 data.message?.toLowerCase().includes("token");
 
             alert(isCaptchaError 
-                ? "Por favor, complete o Captcha antes de enviar." 
+                ? "Por favor, complete o Captcha antes de enviar.\nSe o problema persistir, tente recarregar a página." 
                 : "Erro: " + data.message
             );
         }
