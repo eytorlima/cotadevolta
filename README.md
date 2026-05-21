@@ -101,10 +101,15 @@ cotadevolta/
 │   │   ├── main.css                # Hero section
 │   │   ├── talkwithus_popup.css    # Contact form popup
 │   │   └── whoweare.css            # "Who We Are" section
-│   └── policy/
-│       └── privacy_policy.css      # Privacy policy page styles
+│   ├── policy/
+│   │   └── privacy_policy.css      # Privacy policy page styles
+│   └── errors/
+│       └── error.css               # Errors page styles
 ├── index.html              # Main page
-└── privacidade.html        # Privacy policy page
+├── privacidade.html        # Privacy policy page
+├── 403.html                # Access denied route page
+└── 404.html                # Not found route page
+
 ```
 
 ---
