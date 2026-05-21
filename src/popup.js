@@ -134,6 +134,10 @@ buttons.forEach((btn) => {
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("close") || e.target.id === "popup") {
         popup.classList.remove("active");
+
+        if (window.hcaptcha) {
+            setTimeout(() => hcaptcha.reset(), 100);
+        }
     }
 });
 
