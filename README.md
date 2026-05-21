@@ -1,6 +1,7 @@
 # Cota de Volta
 
 [![Deploy](https://img.shields.io/badge/deploy-netlify-00C7B7?style=flat-square&logo=netlify)](https://cotadevolta.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e6607999-0ed0-4828-af49-3336405f36ca/deploy-status)](https://app.netlify.com/projects/cotadevolta/deploys)
 [![Status](https://img.shields.io/badge/status-production-brightgreen?style=flat-square)]()
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red?style=flat-square)]()
 
